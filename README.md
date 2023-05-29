@@ -1,6 +1,6 @@
 # Computer science
 
-Este documento es una **sintesis de la kata** (clases, campus, tareas y proyectos) **más temas extra** (estrechamente relacionados) para brindar la **posibilidad** al estudiante **de ampliar** sus **conocimientos**. Para su mejor aprovechamiento se recomienda **leerlo como guía** y **ampliar sus notas** con base en **investigación/autoestudio** y **ejercicios** subirlo a su propio repositorio.
+Este documento es una **sintesis de la kata** (clases, campus, tareas y proyectos) **más temas extra** (estrechamente relacionados) para brindar la **posibilidad** al estudiante **de ampliar** sus **conocimientos**. Para su mejor aprovechamiento se recomienda **leerlo como guía** y **ampliar sus notas** con base en **investigación, autoestudio** y **ejercicios**.
 
 **Estructura de carpetas sugerida**
 
@@ -18,7 +18,7 @@ Este documento es una **sintesis de la kata** (clases, campus, tareas y proyecto
 1. [Intro a la logica de programacion](#intro-a-lenguajes-de-programacion)
 2. [EcmaScript](#ecmascript)
 3. [Prototype y POO](#prototype-y-poo)
-4. [Manipulacion del DOM](#manipulacion-del-dom)
+4. [Document Object Model DOM](#document-object-model-dom)
 5. [Consumo de apis](#consumo-de-apis)
 6. [Presentaciones](#presentaciones)
 7. [Informacion y recursos extra](#informacion-y-recursos-extra)
@@ -339,7 +339,7 @@ pidgey.flight();
 
 **Nota:** Recuerde la exitencia de Object.create y { ...props } para generar nuevos objetos a partir de otros sin mantener la referencia.
 
-### Manipulacion del DOM
+### Document Object Model DOM
 
 working...
 
