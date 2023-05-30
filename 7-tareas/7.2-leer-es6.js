@@ -1,0 +1,1 @@
+Investigar que es ecma y listar algunas funcionalidades
