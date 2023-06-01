@@ -19,10 +19,12 @@ Este documento es una **sintesis de la kata** (clases, campus, tareas y proyecto
 2. [EcmaScript](#ecmascript)
 3. [Prototype y POO](#prototype-y-poo)
 4. [Document Object Model DOM](#document-object-model-dom)
-5. [Consumo de apis](#consumo-de-apis)
-6. [Presentaciones](#presentaciones)
-7. [Informacion y recursos extra](#informacion-y-recursos-extra)
-8. [Glosario](#glosario)
+5. [Frameworks CSS](#frameworks-css)
+6. [Formularios](#formularios)
+7. [Consumo de apis](#consumo-de-apis)
+8. [Presentaciones](#presentaciones)
+9. [Informacion y recursos extra](#informacion-y-recursos-extra)
+10. [Glosario](#glosario)
 
 ## Introducción a la logica de programacion
 
@@ -38,11 +40,12 @@ Es un razonamiento en que las ideas se desarrollan en forma coherente, sin contr
 4. Ejecución y validación.
 5. Pruebas de aceptación.
 
-**Requerimientos funcionales**
-Son aquellos requerimientos que tienen que ver con la solucion del usuario.
+**Requerimientos**
 
-**Requerimientos no funcionales**
-Son caracteristicas que un sistema necesita para funcionar adecuadamente pero que no aportan valor operativo al usuario.
+Un requerimiento es la funcionalidad que necesita tener un proyecto, existen de dos tipos:
+
+* **Requerimientos funcionales:** Son aquellos requerimientos que tienen que ver con la solucion del usuario. Aportan valor funcional al usuario.
+* **Requerimientos no funcionales:** Son caracteristicas que un sistema necesita para funcionar adecuadamente pero que no aportan valor operativo al usuario.
 
 ### Algoritmo
 
@@ -81,6 +84,8 @@ Forma gráfica de representar un algoritmo. Tambien es util para documentar proc
 * Conectores (circulos o líneas).
 * Flechas.
 
+![1685409514137](image/README/1685409514137.png)
+
 Todos los diagramas de Ingeniería de software se basan en [UML](https://drive.google.com/file/d/0B_mAPkMcdtUsMHgtUWZJMWZvYms/view?resourcekey=0-ITkYE1KVVbh_tCutVSL_ew) (Unified Model Language).
 
 #### Pseudocódigo
@@ -88,7 +93,7 @@ Todos los diagramas de Ingeniería de software se basan en [UML](https://drive.g
 Lenguaje hibrido entre el natural y el codigo de programacion, utiliza ciertas convenciones de programacion pero sigue siendo entendible para las personas.
 
 * "INICIO".
-* “Leer”.
+* “Leer a”.
 * “Si… entonces…”
 * “Si no … entonces…”
 * “Mientras…”
@@ -98,79 +103,84 @@ Lenguaje hibrido entre el natural y el codigo de programacion, utiliza ciertas c
 
 #### Código
 
-Resolver el problema mediante algín lenguaje de programación.
+Resolver el problema mediante la sintáxis de algún lenguaje de programación.
 
 #### Prueba de escritorio
 
-Es probar mediante valores reales si nuestro algoritmo soluciona correctamente el problema.
+Es probar mediante valores reales si nuestro algoritmo soluciona correctamente el problema. Generalmente se genera una tabla donde ponemos la formula de nuestro algoritmo y vamos siguiendo el flujo y reemplanzando por valores reales, de esta manera se valida si el algoritmo que programamos/vamos a programar resuelve el problema.
+
+A nivel de código JS usted puede utilizar la keyword [debugger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) y las herramientas del navegador.
 
 ## ECMAScript
 
-Es el estándar que la empresa del mismo nombre definió para JavaScript en el año 2015 (ES6) y encarga de regir como debe ser interpretado y cómo debe funcionar el lenguaje JavaScript.
+Es una especificación (estándar) que la empresa del mismo nombre definió para JavaScript en el año 2015 (ES6). Si bien ecma existe desde 1996, ES6 es un punto de quiebre en la historia.
 
-### Lista de funcionalidades
+### Lista de funcionalidades ES6 - ES13
+
+Cabe destacar que las funcionalidades listadas a continuación fueron seleccionadas por el [autor](https://www.linkedin.com/in/jose-montoya-guzman-66aa32129/) de este readme.md y es una opinión de las features de las versiones de ecma que realmente se utilizan en la industria, con base en su propia experiencia y que pueden encontrar más en la [documentación oficial](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) de ecmascript.
 
 * Let y const.
+* Template literals (template strings).
 * Arrow functionts (short and long form).
-* For in/ for of.
+* For in y for of.
 * Map vs forEach.
-* Classes.
-* Promises.
-* Default parameters.
+* Object entries, keys y values.
+* Destructuring.
 * Spread operator.
 * Rest operator.
-* Object entries, keys y values.
+* Default parameters.
+* Métodos de arreglos (push, slice, splice, indexOf, includes, find, findIndex, map, filter, reduce, reverse, forEach).
+* Classes y constructor.
 * JS Modules.
-* Literal templates / Template strings.
 * Map y Set (Estructura de datos)
-* Promises
+* RegExp.
+* Promises.
 * Async / await.
 * Finally (Promises).
-* RegExp.
-* Métodos de arreglos (push, slice, splice, indexOf, includes, find, findIndex, map, filter, reduce, reverse, forEach).
 
 #### Bonus JS
 
-* Tablas de verdad y tipos de operadores.
-* Valor por defecto de una variable.
-* Cortocircuito ?.
-* Paso por referencia y valor.
-* Diferencia entre map y forEach.
+Las siguientes son caracteristicas de cualquier lenguaje de programación y a continuación se explican como se usan en JS. No necesariamente son parte de ECMA pero si son conocimientos indispensables para un desarrollador, especialmente uno de JS.
+
+* ¿Qué es el valor por defecto de una variable y cuáles son para cada tipo de dato?.
+* Diferencia entre paso por referencia y valor.
+* Validación de datos en JS
+* Validación de datos con JS Moderno (Encadenamiento opcional (?) / Operador de cortocircuito).
+* Manejo de excepciones (Try, catch).
 * Tipos de funciones en JS.
-* Valor por defecto de una variable.
-* Operador de cortocircuito ?.
+* Tipos de salida de una función (return y void/undefined).
 * Hoisting.
-* Tipos de salida de una función.
-* Paso por referencia y valor.
+* Operadores type of, instanceof y delete.
 * Tablas de verdad y tipos de operadores.
-* Tipos de funciones en JS.
-* Delete, type of, instanceof.
-* Destructuring.
+* Longitud de tipos de datos.
+* Tipos de datos especiales de js (null, undefined, infinity, NaN).
+
+Además de los temas visto y con el fin de leer algo más completo se sugiere revisar [eloquent JS](https://eloquentjavascript.net/Eloquent_JavaScript_small.pdf).
 
 ## Protototipos y POO
 
 ### Intro
 
-**Tipos de datos en programación (agnóstico del lenguaje)**
+**Tipos de datos en programación (agnósticos del lenguaje)**
 
 * Boolean.
 * String.
 * Array.
-* Objetos.
-* Numeros.
-* Numeros decimales.
+* Object.
+* Number.
+* Double (Decimal Number).
 
 **Fuerte y debilmente tipado**
 
 ```
-// debilmente tipado JS
+// debilmente tipado JS (scope varName = value;)
 let numero = 10
 let numero2 = 99.7
 numero = "este es numero"
 ```
 
 ```
-// fuertemente tipado Java
+// fuertemente tipado Java (dataType varName = value;)
 int numero = 10;
 double numero2 = 99.7
 numero = "este es numero" // error
@@ -178,8 +188,17 @@ numero = "este es numero" // error
 
 **Jerga de objetos**
 
-clase = prototipo = plantilla = modelos
-objeto concreto = instancia = miembro = variable miembro
+Existen conceptos en programación que son casi lo mismo, pero que conmúnmente se usan para referirse a lo mismo.
+
+clase = prototipo = plantilla = modelo
+objeto = objeto concreto = instancia = miembro = variable miembro = variable del tipo de claseX
+
+**Objectos JS y JSON**
+
+// objeto js => atributo y valor
+const person = {
+    name: "jose m"
+}
 
 // json => key: value
 {
@@ -187,13 +206,6 @@ objeto concreto = instancia = miembro = variable miembro
         name: "jose m"
     }
 }
-
-// objeto js => propiedad y valor
-const person = {
-    name: "jose m"
-}
-
-// poo => atributos y valor
 
 ### Prototype
 
@@ -228,14 +240,6 @@ const pikachu = {
 }
 ```
 
-##### new Object.
-
-```
-const pikachu = new Object();
-pikachu.name: 'pikachu',
-pikachu.height: 90
-```
-
 ##### Funcion constructora
 
 ```
@@ -247,16 +251,6 @@ function createPokemon(name, height) {
   return auto;  
 }  
 const pikachu = createPokemon('pikachu', 90);
-```
-
-##### Funcion constructora con new y this.
-
-```
-function createPokemon(name, height) {
-    this.name: name,
-    this.height: height,
-}
-const pikachu = new createPokemon('pikachu', 90);
 ```
 
 ##### Prototype (herencia).
@@ -280,7 +274,17 @@ console.log(pikachu.height);
 Pokemon.prototype.camina = function() {
       console.log('C-A-M-I-N-A-R')
 };
-pikachu.camina();
+pikachu.camina()
+```
+
+##### Funcion constructora con new y this.
+
+```
+function createPokemon(name, height) {
+    this.name: name,
+    this.height: height,
+}
+const pikachu = new createPokemon('pikachu', 90);
 ```
 
 ##### Sugar Syntaxis.
@@ -346,10 +350,6 @@ working...
 ### Presentaciones
 
 Se encuentran en la  [carpeta assets](./assets/) de este mismo repo.
-
-### Informacion y recursos extra
-
-working...
 
 ### Glosario
 

@@ -1,1 +1,1 @@
-Investigar que es ecma y listar algunas funcionalidades
+Investigar que es ecma y listar las funcionalidades mas importantes entre es6 y es13
