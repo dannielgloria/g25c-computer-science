@@ -41,7 +41,22 @@ console.log('name:', name);
 // app = 'montoya';
 // Uncaught SyntaxError: Missing initializer in const declaration
 
-const app = 'montoya';
-console.log('app:', app);
+const APP = 'montoya';
+console.log('app:', APP);
 // app = 'mendez'; // Uncaught TypeError: Assignment to constant variable.
-console.log('app:', app);
+console.log('app:', APP);
+
+/**
+ * constantes
+ * Nombrarlas con mayuscula cuando son valores de referencia o comparacion en nuestro sistema.
+ * Ejemplos: const MAYOR_AGE = 18; const PI = 3.1416; const RFC = 'RFC';
+ * Nombrarlas con minusculas cuando no son valores de referencia o comparacion y son simples variables
+ * Ejemplos:
+ * for (let i=0: i<11; i++) {
+ * console.log(i)
+ * }
+ */
+
+/**
+ * const, sino let, sino enviar parametro, sino var (si use var en un 99.99% de las veces algo hice mal)
+ */
