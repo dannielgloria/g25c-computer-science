@@ -11,7 +11,7 @@ const getDataFromJson = async() => {
     const response = await fetch('./info.json');
     // 2. obtener del response con la funciion .json la data (pokemons)
     const pokemons =  await response.json();
-    console.log('pokemons: ', pokemons)
+    console.log('pokemons: ', pokemons);
 };
 
 // getDataFromJson();
@@ -29,8 +29,10 @@ const getDataFromApi = async() => {
 
     for (iterador of pokemons.results) {
         const response = await fetch(iterador.url);
-        const pokemon = await response.json();
+        console.log('response: ', response);
+        const pokemon = response.json();
         console.log('pokemon: ', pokemon.name, pokemon.sprites.front_default);
+        // codigo de pinta la tarjetita de c/pokemon
     }
     
 };
