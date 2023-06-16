@@ -30,9 +30,16 @@ const getDataFromApi = async() => {
     for (iterador of pokemons.results) {
         const response = await fetch(iterador.url);
         console.log('response: ', response);
-        const pokemon = response.json();
+        const pokemon = await response.json();
         console.log('pokemon: ', pokemon.name, pokemon.sprites.front_default);
+        
         // codigo de pinta la tarjetita de c/pokemon
+        const imgContainer = document.querySelector('#container-images');
+        console.log(imgContainer)
+        const imgElement = document.createElement('img');
+        imgElement.setAttribute('src', pokemon.sprites.front_default);
+        imgContainer.appendChild(imgElement);
+
     }
     
 };
